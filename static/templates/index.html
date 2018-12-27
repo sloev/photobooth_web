@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    </head>
+    <body style="background-color:black;">
+        <style>
+.item{
+  width:200px;
+  text-align:center;
+  display:block;
+  background-color: transparent;
+  border: 0px solid transparent;
+  margin-right: 8px;
+  margin-bottom: 0px;
+  color:pink;
+  float:left;
+}
+        </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130755244-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-130755244-1');
+        </script>
+
+        <h1 style="color:wheat;">Loppenbooth most recent photos 🐜</h1>
+        <h3 style="color:red;">Click images to share on facebook!!! 🌮</h3>
+        <ul id="container">
+            {% for date, image in images %}
+            <div class="item">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://booth.loppen.dk/images/{{image}}"><img class="item" src="/images/{{ image }}"/></a>
+                    <p>{{ date }}</p>
+                  </div>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

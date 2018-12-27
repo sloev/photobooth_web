@@ -1,0 +1,6 @@
+Flask==0.12
+simplejson==3.0.7
+boto3
+dateutils
+Jinja2
+sanic
